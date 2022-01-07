@@ -1,0 +1,161 @@
+/* Import Google Fonts - Roboto, Reem Kufi, Indie Flower and Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@100;200&display=swap');
+
+/* Import Font Awesome for Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* Import Animate.css library */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css");
+
+:root {
+    --black: #181817;
+    --light-black: #272625;
+    --red: #eb5e28;
+    --gray: #989898;
+    --dark-gray: #403d39;
+    --white: #fff;
+
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+
+    --transition: all 0.4s ease;
+}
+
+html, body {
+    font-family: var(--primary-font);
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+.icon {
+    color: var(--gray);
+}
+
+.red {
+    color: var(--red);
+    transition: all 0.4s ease;
+}
+
+/****** LOADING SCREEN ******/
+.loadingscreen {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--light-black);
+    font-weight: 600;
+    color: var(--white);
+    font-size: 70px;
+    position: fixed;
+    width: 100%;
+    z-index: 80;
+    display: none;
+}
+
+.nav__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: var(--black);
+    z-index: 5;
+    display: none;
+}
+    .nav__close {
+        position: absolute;
+        right: 5%;
+        top: 4%;
+        font-size: 2em;
+        cursor: pointer;
+        height: 32px;
+        width: 32px;
+        transition: all 0.3s ease-in;
+    }
+
+    .nav__links a {
+        color: var(--gray);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-family: var(--primary-font);
+        font-size: 2em;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    
+    .nav__links a:hover {
+        color: var(--dark-gray);
+        transition: 0.4s;
+    }
+
+.nav__bar {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    padding: 10px;
+    z-index: 3;
+    /*display: none;*/
+}
+    .menubar {
+        position: absolute;
+        right: 4%;
+        top: 40%;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: all 0.4s ease;
+    }
+
+.header {
+    background: var(--black);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    }    
+    .social__media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: auto;
+        padding: 60px;
+        position: absolute;
+    }
+        .social__media a {
+            padding: 5px;
+        }
+        .git:hover, .linkedin:hover {
+            color: var(--white);
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out;
+        }
+
+    .header__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+    }
