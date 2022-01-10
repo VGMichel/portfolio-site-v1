@@ -10,7 +10,7 @@
 :root {
     --black: #181817;
     --light-black: #272625;
-    --red: #eb5e28;
+    --blue: #289deb;
     --gray: #989898;
     --dark-gray: #403d39;
     --white: #fff;
@@ -26,7 +26,7 @@ html, body {
     height: auto;
     overflow: hidden;
     width: 100%;
-    background-color: var(--black);
+    /*background-color: var(--black);*/
     color: var(--white);
 }
 
@@ -40,12 +40,25 @@ a, a:hover, a:focus {
     text-decoration: none;
 }
 
+#particles-js {
+    background: var(--black);
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: block;
+    z-index: 0;
+}
+
 .icon {
     color: var(--gray);
 }
 
-.red {
-    color: var(--red);
+.blue {
+    color: var(--blue);
     transition: all 0.4s ease;
 }
 
@@ -140,6 +153,7 @@ a, a:hover, a:focus {
         width: auto;
         padding: 60px;
         position: absolute;
+        z-index: 10;
     }
         .social__media a {
             padding: 5px;
@@ -158,4 +172,14 @@ a, a:hover, a:focus {
         height: 100vh;
         width: 100%;
         position: absolute;
+    }
+
+    .name {
+        font-size: 3em;
+        font-weight: 500;
+    }
+    .intro {
+        font-size: 1.9em;
+        font-family: var(--secondary-font);
+        font-weight: 100;
     }

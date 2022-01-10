@@ -8,22 +8,22 @@
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" media="screen" href="css/style.css">
 
     <!-- Icon -->
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
 
 </head>
 <body>
     <!-- LOADING SCREEN START -->
     <div class="content">
         <div id="loading" class="loadingscreen">
-            <span class="red">val.</span>m
+            <span class="blue">val.</span>m
         </div>
     </div>
     <!-- LOADING SCREEN END -->
-
 
     <!-- MAIN CONTENT -->
     <!-- Navigation START -->
@@ -54,6 +54,7 @@
     <!-- Menu END -->
 
     <div class="header">
+        <div id="particles-js"></div>
         <!-- Social Media START -->
         <div class="social__media">
             <a href="#">
@@ -67,14 +68,15 @@
         
         <div class="header__content">
             <div class="name">
-                Call me <span class="red">val.</span>
+                Call me <span class="blue">val.</span>
             </div>
             <div class="intro">
-                "I'm a "
-                <span class="txt-rotation red"></span>
+                I'm a
+                <span class="txt-rotation blue"></span>
             </div>
         </div>
     </div>
-
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
