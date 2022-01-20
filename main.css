@@ -84,17 +84,24 @@ a, a:hover, a:focus {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    left: 0;
+    top: 0;
     height: 100vh;
-    width: 100%;
+    width: 0;
     position: fixed;
     background-color: var(--black);
+    overflow: hidden;
+    transition: 0.5s;
     z-index: 5;
-    display: none;
+}
+
+.active {
+    width: 100%;
 }
     .nav__close {
         position: absolute;
-        right: 5%;
-        top: 4%;
+        right: 3.8%;
+        top: 3.5%;
         font-size: 2em;
         cursor: pointer;
         height: 32px;
