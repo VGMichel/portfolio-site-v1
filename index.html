@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,13 @@
     <link rel="stylesheet" href="main.css">
 
     <!-- Icon -->
-    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
     <script type="text/javascript"></script>
 
 </head>
+
 <body>
     <!-- LOADING SCREEN START -->
     <div class="content">
@@ -26,57 +28,88 @@
     <!-- LOADING SCREEN END -->
 
     <!-- MAIN CONTENT -->
-    <!-- Navigation START -->
-    <div class="nav__content">
-        <div class="nav__close">
-            <span class="iconify" data-icon="bi:x-lg"></span>
-        </div>
-        <div class="nav__links">
-            <a href="#">home</a>
-            <a href="#">about</a>
-            <a href="#">projects</a>
-            <a href="#">contact</a>
-        </div>
-    </div>
-    <!-- Navigation END -->
 
     <!-- Menu START -->
-    <div class="nav__bar">
-        <img src="" alt="">
         <div class="menubar">
-            <!--<span class="firstLine"></span>
-            <span class="secondLine"></span>
-            <span class="thirdLine"></span>-->
-            <span id="menu__icon" class="iconify" data-icon="clarity:menu-line" style="color: white; font-size: 1.5em;"></span>
-
+                <!-- Navigation START -->
+                <div class="nav__content">
+                    <div class="nav__links">
+                        <a href="#home">home</a>
+                        <a href="#projects">projects</a>
+                        <a href="#">contact</a>
+                    </div>
+                </div>
+                <!-- Navigation END -->
         </div>
-    </div>
     <!-- Menu END -->
 
-    <div class="header">
+    <div id="home" class="header">
         <div id="particles-js"></div>
         <!-- Social Media START -->
         <div class="social__media">
             <a href="#">
-                <span class="iconify icon git" data-icon="akar-icons:github-fill" data-width="18"></span>
+                <i class="fa-brands fa-github icon"></i>
             </a>
             <a href="#">
-                <span class="iconify icon linkedin" data-icon="akar-icons:linkedin-fill" data-width="18"></span>
+                <i class="fa-brands fa-linkedin icon"></i>
             </a>
         </div>
         <!-- Social Media END -->
-        
+
         <div class="header__content">
             <div class="name">
                 Call me <span class="blue">val.</span>
             </div>
             <div class="intro">
-                I'm a
-                <span class="txt-rotation blue"></span>
+                I'm a <span class="blue">Front End Developer</span>
             </div>
+            <a href="#projects">
+                <i class="fa-solid fa-arrow-down-long arrow" style="color: white;
+                font-size: 2rem;"></i>
+            </a>
         </div>
     </div>
+    <div id="projects" class="project__section">
+        <h2 class="title">Projects</h2>
+        <section class="project item1">
+            <div class="wrapper">
+                <div class="img-container">
+                    <img src="">
+                </div>
+                <div class="description">
+                    <h3>Project Name</h3>
+                    <p>Content will go in here.</p>
+                    <a href="#" title="View Demo">View Demo</a>
+                    <a href="#" title="View Source Code">Source Code</a>
+                </div>
+            </div>
+        </section>
+        <section class="project item2">
+            <div class="img-container">
+                <img src="">
+            </div>
+            <div class="description">
+                <h3>Project Name</h3>
+                <p>Content will go in here.</p>
+                <a href="#" title="View Demo">View Demo</a>
+                <a href="#" title="View Source Code">Source Code</a>
+            </div>
+        </section>
+        <section class="project item3">
+            <div class="img-container">
+                <img src="">
+            </div>
+            <div class="description">
+                <h3>Project Name</h3>
+                <p>Content will go in here.</p>
+                <a href="#" title="View Demo">View Demo</a>
+                <a href="#" title="View Source Code">Source Code</a>
+            </div>
+        </section>
+    </div>
+    <footer>All Rights Reserved 2022</footer>
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
+
 </html>
