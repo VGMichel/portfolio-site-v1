@@ -1,5 +1,5 @@
 /* Import Google Fonts - Roboto, Reem Kufi, Indie Flower and Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@100;200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@100;200&family=Smooch+Sans:wght@100;200;300;400;500;600;700&display=swap");
 
 /* Import Font Awesome for Icons */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -17,6 +17,7 @@
 
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Montserrat", sans-serif;
+  --tertiary-font: "Smooch Sans", sans-serif;
 
   --transition: all 0.4s ease;
 }
@@ -211,15 +212,20 @@ a:focus {
 .project {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 30px 0;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .img-container {
   width: 400px;
   height: 260px;
+  margin-right: 40px;
+}
+
+.img-container img {
+  width: 400px;
 }
 
 .wrapper {
@@ -228,12 +234,31 @@ a:focus {
 }
 
 .description {
-  margin-left: 40px;
+  text-align: left;
 }
 
 .description a {
   margin-right: 15px;
   text-decoration: underline;
   color: var(--gray);
-  font-size: 0.9em;
+  font-size: 1.1em;
+  font-family: var(--tertiary-font);
+}
+
+.description p {
+  font-family: var(--tertiary-font);
+  font-weight: 500;
+  font-size: 1.2em;
+  color: var(--gray);
+  margin: 10px 0;
+}
+
+.languages {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
 }
