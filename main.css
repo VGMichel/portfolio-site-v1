@@ -108,7 +108,7 @@ a:focus {
 
 .menubar {
   width: 100%;
-  position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,12 +124,6 @@ a:focus {
 }
 .nav__content a {
   margin: 0 15px;
-}
-
-/*.active {
-  width: 100%;
-}*/
-.nav__links a {
   color: var(--gray);
   padding: 10px;
   font-family: var(--primary-font);
@@ -139,9 +133,21 @@ a:focus {
   text-decoration: none;
 }
 
-.nav__links a:hover {
+/*.active {
+  width: 100%;
+}*/
+
+.nav__content a:hover {
   color: var(--white);
   transition: 0.4s;
+}
+
+.menubar.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 10px 8%;
+  background-color: var(--black);
 }
 
 .header {
@@ -204,6 +210,7 @@ a:focus {
 }
 .project__section {
   color: var(--black);
+  padding: 60px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,10 +229,34 @@ a:focus {
   width: 400px;
   height: 260px;
   margin-right: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+}
+
+.img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(40, 157, 235, 0.6);
+  transition: all 0.5s ease-in-out;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.wrapper:hover .img-container::before {
+  background: transparent;
 }
 
 .img-container img {
-  width: 400px;
+  width: inherit;
+  height: inherit;
+  object-fit: fill;
+  border-radius: 30px;
 }
 
 .wrapper {
@@ -254,7 +285,22 @@ a:focus {
 }
 
 .languages {
-  display: none;
+  background: #ebebeb;
+  padding: 50px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.languages i {
+  font-size: 3.3rem;
+  margin: 0 15px;
+}
+
+footer {
+  color: #181817;
+  text-align: center;
+  padding: ;
 }
 
 @media screen and (max-width: 768px) {
