@@ -106,7 +106,7 @@ a:focus {
   display: none;
 }
 
-.menubar {
+.menu {
   width: 100%;
   position: absolute;
   display: flex;
@@ -133,6 +133,13 @@ a:focus {
   text-decoration: none;
 }
 
+.nav {
+  display: none;
+}
+
+.nav__bar {
+  display: none;
+}
 /*.active {
   width: 100%;
 }*/
@@ -142,11 +149,11 @@ a:focus {
   transition: 0.4s;
 }
 
-.menubar.sticky {
+.menu.sticky,
+.nav__bar.sticky {
   position: sticky;
   top: 0;
   left: 0;
-  padding: 10px 8%;
   background-color: var(--black);
 }
 
@@ -300,11 +307,99 @@ a:focus {
 footer {
   color: #181817;
   text-align: center;
-  padding: ;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1920px) {
+  .icon {
+    color: var(--gray);
+  }
+
+  .blue {
+    color: var(--blue);
+    transition: all 0.4s ease;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 5;
+  }
+
+  .active {
+    width: 100%;
+  }
+  .nav__close {
+    position: absolute;
+    right: 3.8%;
+    top: 3.5%;
+    font-size: 2em;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    transition: all 0.3s ease-in;
+  }
+
+  .nav__links a {
+    color: var(--gray);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: var(--primary-font);
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .nav__links a:hover {
+    color: var(--white);
+    transition: 0.7s;
+  }
+
+  .menubar {
+    position: fixed;
+    padding: 10px 8% 0;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.4s ease;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav__bar {
+    display: flex;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 749px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .project {
+    justify-content: center;
+  }
+  .description {
+    text-align: center;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 500px;
+  }
 }
